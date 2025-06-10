@@ -30,10 +30,16 @@ margin-left: 40px;
 }
 
 /* Sidebar*/
-.sidebar{
+.sidebar.container{
 background-color: var(--second-color);
 width: 20vw;
-height: 20vh;
+height: 100vh;
+
+    --sidebar-icon-margins: 0px 0px 0px 60px;
+    --sidebar-top-gap: 25px;
+    --sidebar-icon-gap: 20px;
+    --icon-size:1.5rem;
+    --sidebar-font-size: 1.4rem;
 }
 
 /*sidebar header*/
@@ -49,11 +55,7 @@ height: 20vh;
 .sidebar.nav{
     display: flex;
     flex-direction: column;
-    --sidebar-icon-margins: 0px 0px 0px 60px;
-    --sidebar-top-gap: 25px;
-    --sidebar-icon-gap: 20px;
-    --icon-size:1.5rem;
-    --sidebar-font-size: 1.4rem;
+    
 
     gap: var(--sidebar-top-gap);
     color: var(--main-color);
@@ -74,9 +76,36 @@ height: 20vh;
     margin: var(--sidebar-icon-margins);
     width: 30px;
 }
+/* Sidebar footer navigation options*/
+.sidebar.footer{
+    display: flex;
+    flex-direction: column;
+    gap: var(--sidebar-top-gap);
+    color: var(--main-color);
+    padding-top: 100px;
+}
+
+.footer{
+    display:flex;
+    flex-direction: row;
+    gap:var(--sidebar-icon-gap);
+}
+
+.footer span{
+    font-size: var(--sidebar-font-size);
+}
+
+.footer i{
+    font-size:var(--icon-size);
+    margin: var(--sidebar-icon-margins);
+    width: 30px;
+}
 
 /*right side container for top and bottom*/
 .dashboard{
     display:flex;
     flex-direction: column;
+    gap: var(--sidebar-top-gap);
+    color: var(--main-color);
+    padding-top: 30px;
 }
