@@ -46,28 +46,33 @@ height: 20vh;
 }
 
 /*sidebar navigation options*/
-.sidebar.navigation{
+.sidebar.nav{
     display: flex;
     flex-direction: column;
     --sidebar-icon-margins: 0px 0px 0px 60px;
-    --sidebar-icon-gap: 25px;
+    --sidebar-top-gap: 25px;
+    --sidebar-icon-gap: 20px;
     --icon-size:1.5rem;
     --sidebar-font-size: 1.4rem;
-    gap: var(--sidebar-icon-gap);
+
+    gap: var(--sidebar-top-gap);
     color: var(--main-color);
     padding-top: 30px;
 }
 
-.sidebar.navigation > .navigation{
-      gap: var(--sidebar-icon-gap)
+.navigation{
+    display: flex;
+    gap:var(--sidebar-icon-gap);
 }
 
 .navigation span{
     font-size: var(--sidebar-font-size);
 }
+
 .navigation i{
     font-size: var(--icon-size);
-    margin: var(--sidebar-icon-margins)
+    margin: var(--sidebar-icon-margins);
+    width: 30px;
 }
 
 /*right side container for top and bottom*/
