@@ -114,12 +114,13 @@ box-shadow: 0px 0px 5px 5px rgb(206, 206, 206);;
     padding: 40px 0px 0px 90px;
     --top-font: Verdana, Geneva, Tahoma, sans-serif;
     --search-and-bg: rgb(226, 226, 226);
+    --icon-top-size: 1.6rem;
 }
 
 .dashboard.search{
     display: flex;
-    font-size: 1.6rem;
-    gap: 15px;
+    font-size: var(--icon-top-size);
+    gap: 20px;
     align-items: center;
 }
 
@@ -130,7 +131,34 @@ font-family:var(--top-font);
 font-weight: 600;
 background-color: var(--search-and-bg);
 padding-left: 15px;
-width: 30vw;
+width: 35vw;
 height: 35px;
 border-radius: 20px;
+}
+
+.top_half{
+    display: flex;
+    align-items: center;
+}
+
+#bell_icon{
+    margin: 0px 3vw 0px 14vw;
+    font-size:var(--icon-top-size) ;
+}
+
+.top.profile{
+    display: flex;
+    align-items: center;
+}
+
+#top_profile_pic{
+    height: 70px;
+    width: 70px;
+    border-radius: 40px;
+}
+
+#name{
+    padding-left: 25px;
+    font-family: var(--top-font);
+    font-weight: 600;
 }
