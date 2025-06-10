@@ -1,0 +1,77 @@
+/*
+*{
+    border: solid 1px red;
+}
+*/
+
+body{
+    margin:0;
+}
+
+
+.main{
+    --main-color: white;
+    --second-color: orange;
+    --minimal-color: red;
+    display: flex;
+}
+
+
+#ghost_icon{
+font-size: 2.2rem;
+margin-left: 40px;
+
+}
+/* span text next to sidebar header icon*/
+.main > div > div > span{
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 2.2rem
+}
+
+/* Sidebar*/
+.sidebar{
+background-color: var(--second-color);
+width: 20vw;
+height: 20vh;
+}
+
+/*sidebar header*/
+.sidebar.header{
+    display:flex;
+    gap: 20px;
+    align-items: center;
+    color: var(--main-color);
+    height: 100px;
+}
+
+/*sidebar navigation options*/
+.sidebar.navigation{
+    display: flex;
+    flex-direction: column;
+    --sidebar-icon-margins: 0px 0px 0px 60px;
+    --sidebar-icon-gap: 25px;
+    --icon-size:1.5rem;
+    --sidebar-font-size: 1.4rem;
+    gap: var(--sidebar-icon-gap);
+    color: var(--main-color);
+    padding-top: 30px;
+}
+
+.sidebar.navigation > .navigation{
+      gap: var(--sidebar-icon-gap)
+}
+
+.navigation span{
+    font-size: var(--sidebar-font-size);
+}
+.navigation i{
+    font-size: var(--icon-size);
+    margin: var(--sidebar-icon-margins)
+}
+
+/*right side container for top and bottom*/
+.dashboard{
+    display:flex;
+    flex-direction: column;
+}
