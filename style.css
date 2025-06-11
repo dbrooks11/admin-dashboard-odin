@@ -2,7 +2,8 @@
 *{
     border: solid 1px red;
 }
-*/
+  */  
+
 
 body{
     margin:0;
@@ -13,6 +14,7 @@ body{
     --main-color: white;
     --second-color: rgb(241, 157, 0);
     --minimal-color: red;
+    --search-and-bg: rgb(239, 239, 239);
     display: flex;
 }
 
@@ -107,16 +109,16 @@ height: 100vh;
     display:flex;
     flex-direction: column;
     --top-font: Verdana, Geneva, Tahoma, sans-serif;
+     
 }
 
 .top.container{
     display: flex;
     flex-direction: column;
     padding: 10px 0px 0px 90px;
-    
-    --search-and-bg: rgb(226, 226, 226);
     --icon-top-size: 1.6rem;
     box-shadow: 5px 0px 5px 5px rgb(206, 206, 206);
+    height:200px;
     width: calc(100vw - clamp(300px, 20vw, 30vw));
 }
 
@@ -228,4 +230,11 @@ button{
 
 button:hover{
      box-shadow: 5px 5px 5px 1px rgb(184, 184, 184);
+}
+
+/* bottom dashboard container*/
+.bottom.container{
+    background-color: var(--search-and-bg);
+    height: calc(98vh - 200px);
+
 }
