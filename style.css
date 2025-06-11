@@ -14,8 +14,9 @@ body{
     --main-color: white;
     --second-color: rgb(241, 157, 0);
     --minimal-color: red;
-    --search-and-bg: rgb(239, 239, 239);
+    --search-and-bg: rgb(232, 232, 232);
     display: flex;
+    background-color: var(--search-and-bg);
 }
 
 
@@ -34,7 +35,7 @@ margin-left: 40px;
 /* Sidebar*/
 .sidebar.container{
 background-color: var(--second-color);
-width: clamp(400px, 20vw, 30vw);
+width: clamp(400px, 20vw, 450px);
 height: 100vh;
 
 --sidebar-icon-margins: 0px 0px 0px 60px;
@@ -112,14 +113,15 @@ height: 100vh;
      
 }
 
-.top.container{
+#top_container{
     display: flex;
     flex-direction: column;
     padding: 10px 0px 0px 90px;
     --icon-top-size: 1.6rem;
     box-shadow: 5px 0px 5px 5px rgb(206, 206, 206);
     height:200px;
-    width: calc(100vw - clamp(300px, 20vw, 30vw));
+    width: calc(100vw - clamp(400px, 20vw, 450px));
+    background-color: var(--main-color);
 }
 
 .dashboard.search{
@@ -234,7 +236,6 @@ button:hover{
 
 /* bottom dashboard container*/
 .bottom.container{
-    background-color: var(--search-and-bg);
     height: calc(98vh - 200px);
 
 }
