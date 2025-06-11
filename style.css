@@ -11,7 +11,7 @@ body{
 
 .main{
     --main-color: white;
-    --second-color: orange;
+    --second-color: rgb(241, 157, 0);
     --minimal-color: red;
     display: flex;
 }
@@ -32,7 +32,7 @@ margin-left: 40px;
 /* Sidebar*/
 .sidebar.container{
 background-color: var(--second-color);
-width: clamp(300px, 20vw, 30vw);
+width: clamp(400px, 20vw, 30vw);
 height: 100vh;
 
 --sidebar-icon-margins: 0px 0px 0px 60px;
@@ -41,7 +41,7 @@ height: 100vh;
 --icon-size:1.5rem;
 --sidebar-font-size: 1.4rem;
 
-box-shadow: 0px 0px 5px 5px rgb(206, 206, 206);;
+
 }
 
 /*sidebar header*/
@@ -106,15 +106,18 @@ box-shadow: 0px 0px 5px 5px rgb(206, 206, 206);;
 .dashboard.container{
     display:flex;
     flex-direction: column;
+    --top-font: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .top.container{
     display: flex;
     flex-direction: column;
     padding: 40px 0px 0px 90px;
-    --top-font: Verdana, Geneva, Tahoma, sans-serif;
+    
     --search-and-bg: rgb(226, 226, 226);
     --icon-top-size: 1.6rem;
+    box-shadow: 5px 0px 5px 5px rgb(206, 206, 206);
+    width: calc(100vw - clamp(300px, 20vw, 30vw));
 }
 
 .dashboard.search{
@@ -136,9 +139,12 @@ height: 35px;
 border-radius: 20px;
 }
 
+/* Top half of top dashboard*/
+
 .top_half{
     display: flex;
     align-items: center;
+    --profile-size-top: 70px;
 }
 
 #bell_icon{
@@ -152,8 +158,8 @@ border-radius: 20px;
 }
 
 #top_profile_pic{
-    height: 70px;
-    width: 70px;
+    height: var(--profile-size-top);
+    width: var(--profile-size-top);
     border-radius: 40px;
 }
 
@@ -161,4 +167,39 @@ border-radius: 20px;
     padding-left: 25px;
     font-family: var(--top-font);
     font-weight: 600;
+}
+
+/*bottom half of top container*/
+
+.bottom_half{
+--profile-size-bottom: 90px;
+padding: 20px 0px 20px 10px;
+
+}
+
+.bottom.profile{
+    display: flex;
+}
+
+#bottom_profile_pic{
+height: var(--profile-size-bottom);
+width:var(--profile-size-bottom);
+border-radius: 50px;
+}
+
+
+.hi.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--top-font);
+    font-weight: 600;
+    padding-left: 20px;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+
+.name_and_user{
+font-size: 1.3rem;
 }
