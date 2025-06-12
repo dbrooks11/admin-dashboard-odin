@@ -1,8 +1,8 @@
-
+/*
 *{
     border: solid 1px red;
 }
-   
+   */
 
 
 body{
@@ -20,7 +20,7 @@ body{
     --sidebar-min-width:0;
     display: flex;
     background-color: var(--search-and-bg);
-    height:calc(100vh - var(--top-container-height));
+    height:100vh;
 }
 
 
@@ -40,7 +40,6 @@ margin-left: 40px;
 .sidebar.container{
 background-color: var(--second-color);
 width: var(--sidebar-width);
-
 
 --sidebar-icon-margins: 0px 0px 0px 75px;
 --sidebar-top-gap: 25px;
@@ -116,14 +115,14 @@ width: var(--sidebar-width);
     flex-direction: column;
     width: calc(100vw - var(--sidebar-width));
     --top-font: Verdana, Geneva, Tahoma, sans-serif;
-    --top-container-height: 180px;
+    --top-container-height: 160px;
     --top-container-width: calc(90vw - var(--sidebar-width));
 }
 
 #top_container{
     display: flex;
     flex-direction: column;
-    padding: 10px 0px 0px 20px;
+    padding: 5px 0px 0px 20px;
     --icon-top-size: 1.6rem;
     box-shadow: 5px 0px 5px 5px rgb(206, 206, 206);
     height:var(--top-container-height);
@@ -185,9 +184,9 @@ border-radius: 20px;
 .bottom_half{
 display: flex;
 --profile-size-bottom: 74px;
-height: 70px;
+height: 60px;
 width: 1290px;
-padding: 20px 0px 20px 10px;
+padding: 5px 0px 20px 10px;
 
 }
 
@@ -247,16 +246,15 @@ button:hover{
 /* bottom dashboard container*/
 .bottom.container{
     display: flex;
-    --bottom-margins: 30px 0px 20px 30px;
-    padding: var(--bottom-margins);
-    height: calc(99vh - var(--top-container-height));
+    --bottom-margins: 30px 20px 20px 30px;
+    margin: var(--bottom-margins);
     overflow-y:scroll;
 }
 
 .project.container{
 display: grid;
 gap: 20px;
-grid-template: repeat(3 , 220px) / repeat(2, 450px);
+grid-template: repeat(3 , 200px) / repeat(2, 450px);
 background-color: var(--main-color);
 overflow-y: scroll;
 background-color: transparent;
@@ -270,18 +268,22 @@ background-color: transparent;
 
 .announce_trend{
 display: flex;
-width: 100px;
+width: 400px;
+height: 100;
 flex-direction: column;
-margin: 30px 0px 20px 30px;
+margin: 0px 0px 20px 60px;
 }
 
 .announce{
 background-color: var(--main-color);
-height:40px;
+height:300px;
+width: 100%;
+
 
 }
 
 .trend{
 background-color: var(--main-color);
-height: 40px;
+height: 200px;
+width: 100%;
 }
