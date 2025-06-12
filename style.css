@@ -1,8 +1,8 @@
-/*
+
 *{
     border: solid 1px red;
 }
-  */  
+   
 
 
 body{
@@ -15,8 +15,11 @@ body{
     --second-color: rgb(241, 157, 0);
     --minimal-color: red;
     --search-and-bg: rgb(232, 232, 232);
+    --sidebar-width: clamp(290px, 19vw, 400px);
+    --sidebar-min-width:0;
     display: flex;
     background-color: var(--search-and-bg);
+    height:calc(100vh - var(--top-container-height));
 }
 
 
@@ -35,8 +38,8 @@ margin-left: 40px;
 /* Sidebar*/
 .sidebar.container{
 background-color: var(--second-color);
-width: clamp(400px, 20vw, 450px);
-height: 100vh;
+width: var(--sidebar-width);
+
 
 --sidebar-icon-margins: 0px 0px 0px 60px;
 --sidebar-top-gap: 25px;
@@ -54,6 +57,7 @@ height: 100vh;
     align-items: center;
     color: var(--main-color);
     height: 100px;
+    width: var(--sidebar-width);
 }
 
 /*sidebar navigation options*/
@@ -110,17 +114,18 @@ height: 100vh;
     display:flex;
     flex-direction: column;
     --top-font: Verdana, Geneva, Tahoma, sans-serif;
-     
+    --top-container-height: 180px;
+    --top-container-width: calc(90vw - var(--sidebar-width));
 }
 
 #top_container{
     display: flex;
     flex-direction: column;
-    padding: 10px 0px 0px 90px;
+    padding: 10px 0px 0px 20px;
     --icon-top-size: 1.6rem;
     box-shadow: 5px 0px 5px 5px rgb(206, 206, 206);
-    height:200px;
-    width: calc(100vw - clamp(400px, 20vw, 450px));
+    height:var(--top-container-height);
+    width: calc(100vw - var(--sidebar-width));
     background-color: var(--main-color);
 }
 
@@ -148,11 +153,12 @@ border-radius: 20px;
 .top_half{
     display: flex;
     align-items: center;
+    width: 1300px;
     --profile-size-top: 60px;
 }
 
 #bell_icon{
-    margin: 0px 3vw 0px 14vw;
+    margin: 0px 3vw 0px 10vw;
     font-size:var(--icon-top-size) ;
 }
 
@@ -177,13 +183,16 @@ border-radius: 20px;
 
 .bottom_half{
 display: flex;
---profile-size-bottom: 80px;
+--profile-size-bottom: 74px;
+height: 70px;
+width: 1290px;
 padding: 20px 0px 20px 10px;
 
 }
 
 .bottom.profile{
     display: flex;
+    height:75px;
 }
 
 #bottom_profile_pic{
@@ -212,7 +221,7 @@ font-size: 1.3rem;
 .buttons{
     display: flex;
     gap: 30px;
-    margin-left: clamp(20vw, 25vw, 26vw);
+    margin-left: 20vw;
     align-items: center;
     
     
@@ -236,6 +245,31 @@ button:hover{
 
 /* bottom dashboard container*/
 .bottom.container{
-    height: calc(98vh - 200px);
+    display: flex;
+    --bottom-margins: 30px 0px 20px 30px;
+    overflow:scroll;
+}
 
+.project.container{
+display: grid;
+gap: 20px;
+grid-template: repeat(3 , 220px) / repeat(2, 450px);
+background-color: var(--main-color);
+margin: var(--bottom-margins);
+}
+
+.announce_trend{
+display: flex;
+flex-direction: column;
+height: 200px;
+width: 200px;
+margin: var(--bottom-margins);
+}
+
+.announce{
+background-color: var(--main-color);
+}
+
+.trend{
+background-color: var(--main-color);
 }
