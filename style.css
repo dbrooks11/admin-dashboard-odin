@@ -1,9 +1,8 @@
-/*
+
 *{
     border: solid 1px red;
 }
    
-*/
 
 body{
     margin:0;
@@ -251,17 +250,10 @@ button:hover{
     --bottom-margins: 30px 20px 20px 30px;
     margin: var(--bottom-margins);
     --bottom-font-size:1.3rem;
-    --bottom-font-padding: 5px;
+    --bottom-font-padding: 7px;
     
 }
 
-.project.container{
-display: grid;
-gap: 20px;
-grid-template: repeat(3 , 200px) / repeat(2, 450px);
-background-color: var(--main-color);
-background-color: transparent;
-}
 
 .titles > div{
     font-size: var(--bottom-font-size);
@@ -269,13 +261,30 @@ background-color: transparent;
     padding-bottom: var(--bottom-font-padding);
 }
 
+.project.container{
+display: grid;
+gap: 20px;
+grid-template: repeat(3 , 200px) / repeat(2, 450px);
+background-color: transparent;
+}
+
 /*each project card*/
-.project > .projects{
+.projects{
     border-radius: 10px;
     background: linear-gradient(to right,var(--project-card-side-color) 2%, var(--main-color) 0%);
     background-color: var(--main-color);
+    padding: 0px 5px 0px 20px;
+    box-shadow: 4px 5px 6px 2px rgb(169, 169, 169);
 }
 
+
+.projects p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    
+}
+
+/* announcement section*/
 .announce_trend{
 display: flex;
 width: 400px;
@@ -286,6 +295,7 @@ font-family: var(--top-font);
 font-size: var(--bottom-font-size);
 gap: 40px;
 
+
 }
 
 .announce.container{
@@ -293,6 +303,7 @@ height:320px;
 width: 100%;
 background-color: var(--main-color);
 overflow-y: scroll;
+border-radius: 10px;
 
 }
 
@@ -300,6 +311,7 @@ overflow-y: scroll;
     padding-bottom: var(--bottom-font-padding);
 }
 
+/*trend section*/
 .trend > div{
 padding-bottom: var(--bottom-font-padding);
 }
@@ -309,5 +321,6 @@ background-color: var(--main-color);
 height: 240px;
 width: 100%;
 overflow-y:scroll;
+border-radius: 10px;
 }
 
