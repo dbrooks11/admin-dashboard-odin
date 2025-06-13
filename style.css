@@ -264,7 +264,7 @@ button:hover{
 .project.container{
 display: grid;
 gap: 20px;
-grid-template: repeat(3 , 200px) / repeat(2, 450px);
+grid-template: repeat(3 , 210px) / repeat(2, 460px);
 background-color: transparent;
 }
 
@@ -282,12 +282,25 @@ background-color: transparent;
     flex-direction: column;
     height: 100%;
 }
+.projects > div > span{
+    font-family:monospace;
+    height: 25px;
 
+}
 .projects p{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     height: 100px;
     
+}
+
+.card_icons{
+ display: flex;
+ gap: 30px;
+ justify-content: end;
+ margin: 0px 20px 0px 0px;
+ font-size: 1.7rem;
+ height: 30px;
 }
 
 /* announcement section*/
