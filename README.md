@@ -16,7 +16,7 @@ This is a static admin dashboard project built as part of [The Odin Project](htt
 
 ## Live Demo
 
-[View the live demo](https://dbrooks11.github.io/admin-dashboard)
+[View the live demo](https://admin-dashboard-brooks.vercel.app/)
 
 ## Technologies Used
 
