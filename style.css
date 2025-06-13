@@ -2,7 +2,7 @@
 *{
     border: solid 1px red;
 }
-   */
+  */ 
 
 body{
     margin:0;
@@ -15,7 +15,7 @@ body{
     --minimal-color: red;
     --search-and-bg: rgb(232, 232, 232);
     --project-card-side-color: rgb(255, 207, 159);
-    --sidebar-width: clamp(290px, 19vw, 400px);
+    --sidebar-width: clamp(270px, 17vw, 300px);
     --sidebar-min-width:0;
     --top-font: Verdana, Geneva, Tahoma, sans-serif;
     --card-text-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -35,7 +35,7 @@ margin-left: 40px;
 .main > div > div > span{
     color: var(--main-color);
     font-weight: 400;
-    font-size: 2.2rem
+    font-size: 1.8rem
 }
 
 /* Sidebar*/
@@ -44,11 +44,11 @@ font-family: var(--top-font);
 background-color: var(--second-color);
 width: var(--sidebar-width);
 
---sidebar-icon-margins: 0px 0px 0px 75px;
+--sidebar-icon-margins: 0px 0px 0px 55px;
 --sidebar-top-gap: 25px;
 --sidebar-icon-gap: 20px;
 --icon-size:1.5rem;
---sidebar-font-size: 1.4rem;
+--sidebar-font-size: 1.1rem;
 
 
 }
@@ -59,7 +59,7 @@ width: var(--sidebar-width);
     gap: 20px;
     align-items: center;
     color: var(--main-color);
-    height: 100px;
+    height: 80px;
     width: var(--sidebar-width);
 }
 
@@ -70,7 +70,7 @@ width: var(--sidebar-width);
     
     gap: var(--sidebar-top-gap);
     color: var(--main-color);
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .navigation{
@@ -127,7 +127,7 @@ width: var(--sidebar-width);
     flex-direction: column;
     padding: 9px 0px 0px 20px;
     --icon-top-size: 1.6rem;
-    box-shadow: 5px 0px 5px 5px rgb(206, 206, 206);
+    box-shadow: 7px 0px 5px 5px rgb(206, 206, 206);
     height:var(--top-container-height);
     background-color: var(--main-color);
 }
@@ -156,7 +156,7 @@ border-radius: 20px;
 .top_half{
     display: flex;
     align-items: center;
-    width: 1300px;
+    width: 100%;
     
 }
 
@@ -188,7 +188,7 @@ border-radius: 20px;
 display: flex;
 --profile-size-bottom: 74px;
 height: 60px;
-width: 1290px;
+width: 95%;
 padding: 5px 0px 20px 10px;
 
 }
@@ -251,7 +251,7 @@ button:hover{
 /* bottom dashboard container*/
 .bottom.container{
     display: flex;
-    --bottom-margins: 30px 20px 20px 30px;
+    --bottom-margins: 30px 20px 0px 30px;
     margin: var(--bottom-margins);
     --bottom-font-size:1.3rem;
     --bottom-font-padding: 10px;
@@ -268,7 +268,7 @@ button:hover{
 .project.container{
 display: grid;
 gap: 20px;
-grid-template: repeat(3 , 210px) / repeat(2, 460px);
+grid-template: repeat(3 , 210px) / repeat(2, 400px);
 background-color: transparent;
 }
 
@@ -311,10 +311,10 @@ background-color: transparent;
 /* announcement section*/
 .announce_trend{
 display: flex;
-width: 400px;
+width: 300px;
 height: 110px;
 flex-direction: column;
-margin: 0px 0px 0px 60px;
+margin: 0px 0px 0px 30px;
 font-family: var(--top-font);
 font-size: var(--bottom-font-size);
 gap: 45px;
@@ -365,9 +365,7 @@ border-radius: 10px;
 box-shadow:  4px 5px 6px 2px rgb(169, 169, 169);
 }
 
-.trending_profiles{
 
-}
 
 .profile_and_text{
 display:flex;
