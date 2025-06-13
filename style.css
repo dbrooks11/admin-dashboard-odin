@@ -1,8 +1,8 @@
-
+/*
 *{
     border: solid 1px red;
 }
-   
+   */
 
 body{
     margin:0;
@@ -17,6 +17,9 @@ body{
     --project-card-side-color: rgb(255, 207, 159);
     --sidebar-width: clamp(290px, 19vw, 400px);
     --sidebar-min-width:0;
+    --top-font: Verdana, Geneva, Tahoma, sans-serif;
+    --card-text-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --profile-size-top: 60px;
     display: flex;
     background-color: var(--search-and-bg);
    
@@ -37,6 +40,7 @@ margin-left: 40px;
 
 /* Sidebar*/
 .sidebar.container{
+font-family: var(--top-font);
 background-color: var(--second-color);
 width: var(--sidebar-width);
 
@@ -113,7 +117,7 @@ width: var(--sidebar-width);
     display:flex;
     flex-direction: column;
     width: calc(100vw - var(--sidebar-width));
-    --top-font: Verdana, Geneva, Tahoma, sans-serif;
+
     --top-container-height: 160px;
     --top-container-width: calc(90vw - var(--sidebar-width));
 }
@@ -121,7 +125,7 @@ width: var(--sidebar-width);
 #top_container{
     display: flex;
     flex-direction: column;
-    padding: 5px 0px 0px 20px;
+    padding: 9px 0px 0px 20px;
     --icon-top-size: 1.6rem;
     box-shadow: 5px 0px 5px 5px rgb(206, 206, 206);
     height:var(--top-container-height);
@@ -153,7 +157,7 @@ border-radius: 20px;
     display: flex;
     align-items: center;
     width: 1300px;
-    --profile-size-top: 60px;
+    
 }
 
 #bell_icon{
@@ -250,7 +254,7 @@ button:hover{
     --bottom-margins: 30px 20px 20px 30px;
     margin: var(--bottom-margins);
     --bottom-font-size:1.3rem;
-    --bottom-font-padding: 7px;
+    --bottom-font-padding: 10px;
     
 }
 
@@ -288,7 +292,8 @@ background-color: transparent;
 
 }
 .projects p{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    font-family: var(--card-text-font);
     font-size: 0.9rem;
     height: 100px;
     
@@ -307,27 +312,43 @@ background-color: transparent;
 .announce_trend{
 display: flex;
 width: 400px;
-height: 100;
+height: 110px;
 flex-direction: column;
-margin: 0px 0px 20px 60px;
+margin: 0px 0px 0px 60px;
 font-family: var(--top-font);
 font-size: var(--bottom-font-size);
-gap: 40px;
+gap: 45px;
 
 
 }
 
 .announce.container{
-height:320px;
+height:335px;
 width: 100%;
 background-color: var(--main-color);
-overflow-y: scroll;
 border-radius: 10px;
+box-shadow:  4px 5px 6px 2px rgb(169, 169, 169);;
 
 }
 
-.announce > div{
-    padding-bottom: var(--bottom-font-padding);
+
+.announcement{
+    margin: var(--announce-margin);
+    border-bottom: solid 2px var(--search-and-bg);
+    --announce-margin: 10px 40px 15px 40px;
+}
+
+.announcement > span{
+
+font-family: var(--top-font);
+font-size: 1rem;
+font-weight: 600;
+}
+
+.announcement > p{
+ 
+font-family: var(--card-text-font);
+font-size:0.8rem;
 }
 
 /*trend section*/
@@ -341,5 +362,39 @@ height: 240px;
 width: 100%;
 overflow-y:scroll;
 border-radius: 10px;
+box-shadow:  4px 5px 6px 2px rgb(169, 169, 169);
 }
 
+.trending_profiles{
+
+}
+
+.profile_and_text{
+display:flex;
+padding: 20px 20px 0px 20px;
+gap: 15px;
+}
+
+.profile_and_text img{
+    height: var(--profile-size-top);
+    width: var(--profile-size-top);
+    border-radius: 40px;
+}
+
+.user_and_project{
+display:flex;
+flex-direction: column;
+justify-content: center;
+}
+
+#user{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--top-font);
+}
+
+#project_name{
+    padding-top: 2px;
+    font-size: 0.9rem;
+    font-family: var(--icon-size);
+}
