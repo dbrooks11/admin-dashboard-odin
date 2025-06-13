@@ -1,8 +1,8 @@
-/*
+
 *{
     border: solid 1px red;
 }
-   */
+   
 
 
 body{
@@ -222,6 +222,8 @@ font-size: 1.3rem;
     display: flex;
     gap: 30px;
     margin-left: 20vw;
+    padding-top: 10px;
+    height: 100%;
     align-items: center;
     
     
@@ -248,7 +250,9 @@ button:hover{
     display: flex;
     --bottom-margins: 30px 20px 20px 30px;
     margin: var(--bottom-margins);
-    overflow-y:scroll;
+    --bottom-font-size:1.3rem;
+    --bottom-font-padding: 5px;
+    
 }
 
 .project.container{
@@ -258,6 +262,12 @@ grid-template: repeat(3 , 200px) / repeat(2, 450px);
 background-color: var(--main-color);
 overflow-y: scroll;
 background-color: transparent;
+}
+
+.titles > div{
+    font-size: var(--bottom-font-size);
+    font-family: var(--top-font);
+    padding-bottom: var(--bottom-font-padding);
 }
 
 .project > .projects{
@@ -272,18 +282,30 @@ width: 400px;
 height: 100;
 flex-direction: column;
 margin: 0px 0px 20px 60px;
+font-family: var(--top-font);
+font-size: var(--bottom-font-size);
+gap: 40px;
+
 }
 
-.announce{
-background-color: var(--main-color);
+.announce.container{
 height:300px;
 width: 100%;
-
+background-color: var(--main-color);
 
 }
 
-.trend{
+.announce > div{
+    padding-bottom: var(--bottom-font-padding);
+}
+
+.trend > div{
+padding-bottom: var(--bottom-font-padding);
+}
+
+.trend.container{
 background-color: var(--main-color);
-height: 200px;
+height: 240px;
 width: 100%;
 }
+
